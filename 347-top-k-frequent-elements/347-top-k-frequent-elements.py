@@ -6,16 +6,15 @@ class Solution:
                 hmap[i]=1
             else:
                 hmap[i]+=1
+        freq=[[] for i in range(len(nums)+1)]
+        for n,c in hmap.items():
+            freq[c].append(n)
         op=[]
-        for i in range(k):
-            maxi=0
-            for j in hmap:
-                if hmap[j]>maxi:
-                    maxi=hmap[j]
-                    maxval=j
-            hmap[maxval]=0
-            op.append(maxval)
-        return op
+        for i in range(len(freq)-1,0,-1):
+            for j in freq[i]:
+                op.append(j)
+                if len(op)==k:
+                    return op
         
         
         
