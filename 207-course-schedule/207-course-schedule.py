@@ -17,8 +17,8 @@ class Solution:
             visit.remove(crs)
             premap[crs]=[]
             return True
-        for crs,req in prerequisites:
-            if not dfs(crs) or crs in visit:
+        for crs in range(numCourses):
+            if not dfs(crs):
                 return False
             
         return True
