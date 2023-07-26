@@ -1,7 +1,7 @@
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
-        # if hour<len(dist)-1:
-        #     return -1
+        if hour<len(dist)-1:
+            return -1
         def isPossible(speed):
             c=0
             for i in range(len(dist)):
