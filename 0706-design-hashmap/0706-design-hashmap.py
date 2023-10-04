@@ -1,19 +1,19 @@
 class MyHashMap:
 
     def __init__(self):
-        self.hashmap={}
+        self.myMap={}
 
     def put(self, key: int, value: int) -> None:
-        self.hashmap[key]=value
+        self.myMap[key]=value
 
     def get(self, key: int) -> int:
-        if key in self.hashmap:
-            return self.hashmap[key]
+        if key in self.myMap:
+            return self.myMap[key]
         return -1
 
     def remove(self, key: int) -> None:
-        if key in self.hashmap:
-            self.hashmap.pop(key)
+        if key in self.myMap:
+            self.myMap.pop(key)
 
 
 # Your MyHashMap object will be instantiated and called as such:
