@@ -12,7 +12,7 @@ class Solution:
                 return 
             res.append('(')
             res.append(str(root.val))
-            if not root.left and root.right: #only condition when we are not going to eliminate empty parentheses 
+            if not root.left and root.right:
                 res.append("()") 
             preorder(root.left)
             preorder(root.right)
