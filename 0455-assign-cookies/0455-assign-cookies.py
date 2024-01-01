@@ -9,6 +9,3 @@ class Solution:
                 satisfied+=1
                 j+=1
         return satisfied
-        
-
-        
