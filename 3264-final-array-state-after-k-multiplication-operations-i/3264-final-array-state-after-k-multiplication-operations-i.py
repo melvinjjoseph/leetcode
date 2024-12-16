@@ -6,7 +6,8 @@ class Solution:
         for _ in range(k):
             val,i=heapq.heappop(min_heap)
             heappush(min_heap,(val*multiplier,i))
-        while min_heap:
-            val,i=heapq.heappop(min_heap)
-            nums[i]=val
+            nums[i]=val*multiplier
+        # while min_heap:
+        #     val,i=heapq.heappop(min_heap)
+        #     nums[i]=val
         return nums
