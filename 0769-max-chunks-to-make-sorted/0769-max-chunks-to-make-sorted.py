@@ -1,12 +1,11 @@
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
-        # pos=[0]*len(arr)
         chunk=0
-        set1=set()
-        set2=set()
+        num1=0
+        num2=0
         for i in range(len(arr)):
-            set1.add(i)
-            set2.add(arr[i])
-            if set1==set2:
+            num1+=i
+            num2+=arr[i]
+            if num1==num2:
                 chunk+=1
         return chunk
