@@ -9,19 +9,17 @@ class Solution:
         if not root:
             return []
         ans=[]
-        deq=collections.deque()
-        deq.append(root)
-        while deq:
-            leng=len(deq)
-            t=float("-inf")
-            for i in range(leng):
-                popped=deq.popleft()
-                if popped.val>t:
-                    t=popped.val
+        q=deque([root])
+        while q:
+            n=len(q)
+            row=[]
+            for i in range(n):
+                popped=q.popleft()
+                row.append(popped.val)
                 if popped.left:
-                    deq.append(popped.left)
+                    q.append(popped.left)
                 if popped.right:
-                    deq.append(popped.right)
-            ans.append(t)
-        return ans
-                
+                    q.append(popped.right)
+            
+            ans.append(max(row))
+        return ans    
